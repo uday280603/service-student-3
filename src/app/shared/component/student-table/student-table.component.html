@@ -1,0 +1,35 @@
+<div class="card" *ngIf="getAllStudent.length > 0 ; else noData">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Is Active</th>
+            <th>Edit</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let std of getAllStudent; let i = index ; trackBy trackByfun">
+            <td>{{ i + 1 }}</td>
+            <td>{{ std.fname }} {{ std.lname }}</td>
+            <td>{{ std.email }}</td>
+            <td>{{ std.isActive ? "Yes" : "No" }}</td>
+            <td>
+              <button mat-raised-button color="primary" (click)="onEdit(std)">Edit</button>
+            </td>
+            <td>
+              <button mat-raised-button color="warn"(click)="onRemove(std.stdId)"> Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<ng-template #noData>
+  <p class="alert alert-danger">NO STUDENT YET..!</p>
+</ng-template>
