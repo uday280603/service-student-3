@@ -14,9 +14,9 @@ export class StudentService {
   studentArr = [
     {
       stdId: 101,
-      fname: 'Rahul',
-      lname: 'Sharma',
-      email: 'rahul.sharma@example.com',
+      fname: 'Ronak',
+      lname: 'Indrawanr',
+      email: 'ro@example.com',
       isActive: true,
     }
   ];
