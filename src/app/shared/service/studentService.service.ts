@@ -13,9 +13,9 @@ export class StudentService {
   editObjObs : Observable<Istudent> = this.editObjSub$.asObservable()
   studentArr = [
     {
-      stdId: 101,
+      stdId: 1,
       fname: 'Ronak',
-      lname: 'Indrawanr',
+      lname: 'Indrawar',
       email: 'ro@example.com',
       isActive: true,
     }
